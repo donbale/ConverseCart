@@ -1,0 +1,3 @@
+RAGpipeline/venv/*
+RAGpipeline/.env
+Finetuning/venv/*

@@ -1,0 +1,8 @@
+langchain 
+langchain-community 
+faiss-cpu
+sentence-transformers
+python-dotenv
+langchain-groq
+fastapi 
+uvicorn[standard]

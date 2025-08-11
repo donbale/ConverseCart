@@ -1,0 +1,40 @@
+{"prompt": "Show me all the products you have.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productList\"}}"}
+{"prompt": "Go back to the main page.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productList\"}}"}
+{"prompt": "Let's see everything.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productList\"}}"}
+{"prompt": "View all items.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productList\"}}"}
+{"prompt": "Homepage please.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productList\"}}"}
+
+{"prompt": "Tell me more about the noise cancelling headphones", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productDetail\", \"productId\": \"prod_005\"}}"}
+{"prompt": "Can I see the details for the quantum laptop?", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productDetail\", \"productId\": \"prod_001\"}}"}
+{"prompt": "Show me the 4K Ultra-Wide Monitor.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productDetail\", \"productId\": \"prod_003\"}}"}
+{"prompt": "What's the deal with that ergo-mechanical keyboard?", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productDetail\", \"productId\": \"prod_002\"}}"}
+{"prompt": "I want to look at the portable SSD.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productDetail\", \"productId\": \"prod_006\"}}"}
+{"prompt": "Info on the smart mug.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productDetail\", \"productId\": \"prod_004\"}}"}
+{"prompt": "Click on the headphones.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productDetail\", \"productId\": \"prod_005\"}}"}
+
+{"prompt": "I'd like to buy the smart mug", "completion": "{\"action\": \"addToCart\", \"payload\": {\"id\": \"prod_004\"}}"}
+{"prompt": "Add the quantum laptop to my basket", "completion": "{\"action\": \"addToCart\", \"payload\": {\"id\": \"prod_001\"}}"}
+{"prompt": "Put the ergo keyboard in my cart.", "completion": "{\"action\": \"addToCart\", \"payload\": {\"id\": \"prod_002\"}}"}
+{"prompt": "I'll take the 4K monitor.", "completion": "{\"action\": \"addToCart\", \"payload\": {\"id\": \"prod_003\"}}"}
+{"prompt": "Purchase the noise-cancelling headphones.", "completion": "{\"action\": \"addToCart\", \"payload\": {\"id\": \"prod_005\"}}"}
+{"prompt": "Get me the portable SSD.", "completion": "{\"action\": \"addToCart\", \"payload\": {\"id\": \"prod_006\"}}"}
+{"prompt": "Yes, add it to the cart.", "completion": "{\"action\": \"addToCart\", \"payload\": {}}"}
+{"prompt": "Confirm purchase.", "completion": "{\"action\": \"addToCart\", \"payload\": {}}"}
+
+{"prompt": "What's in my shopping cart?", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"cart\"}}"}
+{"prompt": "Show me my basket.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"cart\"}}"}
+{"prompt": "View cart.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"cart\"}}"}
+{"prompt": "How many items do I have?", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"cart\"}}"}
+{"prompt": "Checkout.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"cart\"}}"}
+
+{"prompt": "I want the expensive laptop.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productDetail\", \"productId\": \"prod_001\"}}"}
+{"prompt": "Show me the cheapest item.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productDetail\", \"productId\": \"prod_004\"}}"}
+{"prompt": "I need a new monitor.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productDetail\", \"productId\": \"prod_003\"}}"}
+{"prompt": "Do you have any good keyboards?", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productDetail\", \"productId\": \"prod_002\"}}"}
+{"prompt": "I need more storage.", "completion": "{\"action\": \"setPage\", \"payload\": {\"name\": \"productDetail\", \"productId\": \"prod_006\"}}"}
+
+{"prompt": "Buy the laptop and the monitor.", "completion": "{\"action\": \"addToCart\", \"payload\": {\"id\": \"prod_001\"}}"}
+{"prompt": "I also want the keyboard.", "completion": "{\"action\": \"addToCart\", \"payload\": {\"id\": \"prod_002\"}}"}
+{"prompt": "Nevermind, don't add that.", "completion": "{\"action\": \"noop\", \"payload\": {}}"}
+{"prompt": "Hello there!", "completion": "{\"action\": \"greet\", \"payload\": {}}"}
+{"prompt": "Thanks, that's all.", "completion": "{\"action\": \"end\", \"payload\": {}}"}

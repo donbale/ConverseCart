@@ -1,0 +1,52 @@
+services:
+  frontend:
+    build: ./frontend
+    container_name: conversecart_frontend
+    ports: ["8080:80"]
+    depends_on: [rag]
+    networks: [conversecart]
+
+  resolver:
+    build: ./resolver_api
+    container_name: conversecart_resolver
+    environment:
+      - CONVERSECART_DB_PATH=/app/conversecart.db
+      - CONVERSECART_CATALOG_MD=/app/product-catalog.md
+    ports: ["8000:8000"]
+    networks:
+      conversecart:
+        aliases:
+          - resolver    # ensure the hostname "resolver" resolves
+
+  rag:
+    build: ./rag_server
+    container_name: conversecart_rag
+    # Load both your Groq envs and (optionally) any service-specific envs
+    env_file:
+      - ./rag_server/.env
+    environment:
+      - LLM_MODE=LOCAL_HF
+      - BASE_MODEL_ID=google/gemma-2b-it
+      - PEFT_MODEL_ID=donbale/ConverseCart-Gemma-2B-Instruct
+      - RESOLVER_BASE_URL=http://resolver:8000
+      - HUGGINGFACE_HUB_TOKEN=${HUGGINGFACE_HUB_TOKEN}  # from root .env
+      - OFFLOAD_DIR=/app/offload              # <— NEW
+      # Optional caps:
+      - CPU_MAX_MEM=8GiB
+      - GPU_MAX_MEM=10GiB
+    volumes:
+      - hf_cache:/root/.cache/huggingface
+      - hf_home:/root/.huggingface
+      - offload_cache:/app/offload   
+    ports: ["8001:8001"]
+    depends_on: [resolver]
+    networks: [conversecart]
+
+networks:
+  conversecart:
+    driver: bridge
+
+volumes:
+  hf_cache:
+  hf_home:
+  offload_cache:

@@ -1,3 +1,4 @@
-RAGpipeline/venv/*
-RAGpipeline/.env
-Finetuning/venv/*
+rag_server/venv/*
+rag_server/.env
+finetuning/venv/*
+.env

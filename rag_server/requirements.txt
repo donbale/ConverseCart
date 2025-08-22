@@ -1,0 +1,18 @@
+fastapi
+uvicorn[standard]
+requests
+python-dotenv
+
+# (RAG bits still optional; unused in LOCAL_HF mode)
+langchain
+langchain-community
+faiss-cpu
+sentence-transformers
+langchain-groq
+
+# Local Hugging Face inference
+transformers>=4.42.0
+accelerate
+peft
+# CPU Torch wheel (works in docker slim). If you have GPU, install the CUDA wheel instead.
+torch --index-url https://download.pytorch.org/whl/cpu
